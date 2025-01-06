@@ -21,7 +21,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                        powershell """
+                        bat """
                     docker stop ${CONTAINER_NAME} 
                     docker rm ${CONTAINER_NAME} 
                     """
